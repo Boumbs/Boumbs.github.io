@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminfelület</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/db.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index.html"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Hambimambi Hamburgerező <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Akcióink</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Étlap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">Kapcsolatok</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/order.html">Házhoz rendelés</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <button id="getServerDataBtn" class="btn btn-primary btn-block">Adatok begyüjtése</button>
+                <table id="adminTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vezetéknév</th>
+                            <th>Keresztnév</th>
+                            <th>email</th>
+                            <th>Cím</th>
+                            <th>Gombok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+    </div>
+
+    <div class="bottomPart">
+
+
+        <div>
+            <span>Kövess minket!</span>
+        </div>
+
+
+
+        <div id="icons">
+            <a href="https://www.facebook.com/" target=" blank">
+                <i class="fa fa-facebook-official" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://twitter.com/explore" target=" blank">
+                <i class="fa fa-twitter" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://www.instagram.com/?hl=hu" target=" blank">
+                <i class="fa fa-instagram" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://www.youtube.com/" target=" blank">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+
+        </div>
+
+        <div id="span">
+
+            <span>Minden jog fenntarva nekem</span>
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <a href="#">Akcióink</a>
+            </div>
+            <div class="col-3">
+                <a href="#">Étlap</a>
+            </div>
+            <div class="col-3">
+                <a href="/about.html">Kapcsolatok</a>
+            </div>
+            <div class="col-3">
+                <a href="/order.html">Házhoz rendelés</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/maindb.js"></script>
+   
+</body>
+
+</html>

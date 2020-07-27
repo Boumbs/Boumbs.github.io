@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+
+.container{
+    margin: 40px;
+    text-align: center;
+}
+
+.bottomPart{
+    text-align: center;
+   font-size: 18px;
+margin-top: 120px;
+background-color: darkslategrey;
+padding-top: 70px;
+padding-bottom: 30px;
+border-top-style: solid;
+border-top-color:darkgray;
+border-top-width: 5px;
+}
+
+#icons { 
+   font-size: 34px;
+   }
+

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+#cafeAboutPage{
+    width: 544px;
+    height: 285px;
+}
+
+#titleAbout{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: gainsboro;
+    font-size: 34px;
+
+}
+
+
+#globe{
+    font-size: 50px;
+}
+
+#mainText {
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    
+}
+
+#mainText h3 { 
+text-align: center;
+font-size: 24px;
+}
+
+.aboutUs {
+    margin-top: 70px;
+   background-color: #f2f4f5;
+  background-color: darkgrey;
+  margin-bottom: 70px;
+}
+
+.bottomPart{
+    text-align: center;
+   font-size: 18px;
+margin-top: 120px;
+background-color: darkslategrey;
+padding-top: 70px;
+padding-bottom: 30px;
+border-top-style: solid;
+border-top-color:darkgray;
+border-top-width: 5px;
+}
+
+#icons { 
+   font-size: 34px;
+   }
+

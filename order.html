@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambimambi Hamburgerező</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index.html"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Hambimambi Hamburgerező <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Akcióink</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Étlap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">Kapcsolatok</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/order.html">Házhoz rendelés</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Vezetéknév:</label>
+                        <input name="lastName" onkeyup="validatorOthers('inputLastName', 'smallLastName')" onclick="validatorOthers('inputLastName', 'smallLastName')" type="text" class="form-control" id="inputLastName" placeholder="Vezetéknév">
+                        <small id="smallLastName"></small>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">Keresztnév:</label>
+                        <input name="firstName" onkeyup="validatorOthers('inputFirstName', 'smallFirstName')" onclick="validatorOthers('inputFirstName', 'smallFirstName')"
+                        required type="text" class="form-control" id="inputFirstName" placeholder="Keresztnév">
+                        <small id="smallFirstName"></small>
+                    </div>
+                </div>
+                <div id="email" class="form-group">
+                    <label for="inputEmail">Email cím:</label>
+                    <input name="email" onkeyup="validator()" onclick="validator()" required type="email" class="form-control" id="inputEmail" placeholder="Pl.: zsombor.csizmadia01@gmial.com">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Cím:</label>
+                    <input name="address" onkeyup="validatorOthers('inputAddress', 'smallAddress')" onclick="validatorOthers('inputAddress', 'smallAddress')"
+                    required type="text" class="form-control" id="inputAddress" placeholder="Vityó utca 7.">
+                    <small id="smallAddress"></small>
+                </div>
+                <div class="form-group">
+                    <label for="inputPlusAddress">Megjegyzés:</label>
+                    <textarea id="inputPlusAddress" rows="3" class="form-control"
+                    placeholder="Emelet, házszám, egyéb velős megjegyzés..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Város</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Budapest" readonly>
+                        <small>Sajnos, még csak Budapestre van kiszállítás!</small>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputDistrict">Kerület</label>
+                        <select   onkeyup="validatorOthersSelect('inputDistrict', 'smallDistrict', 'Kerületek')" onclick="validatorOthersSelect('inputDistrict', 'smallDistrict', 'Kerületek')"
+                        required id="inputDistrict" class="form-control">
+                            <option selected>Kerületek</option>
+                            <option>1. kerület</option>
+                            <option>2. kerület</option>
+                            <option>3. kerület</option>
+                            <option>4. kerület</option>
+                            <option>5. kerület</option>
+                            <option>6. kerület</option>
+                            <option>7. kerület</option>
+                            <option>8. kerület</option>
+                            <option>9. kerület</option>
+                            <option>10. kerület</option>
+                            <option>11. kerület</option>
+                            <option>12. kerület</option>
+                            <option>13. kerület</option>
+                            <option>15. kerület</option>
+                            <option>16. kerület</option>
+                            <option>17. kerület</option>
+                            <option>18. kerület</option>
+                            <option>19. kerület</option>
+                            <option>20. kerület</option>
+                            <option>21. kerület</option>
+                            <option>22. kerület</option>
+                            <option>23. kerület</option>
+                        </select>
+                        <small id="smallDistrict"></small>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Irányítószám:</label>
+                        <input     onkeyup="validatorOthers('inputZip', 'smallZip')" onclick="validatorOthers('inputZip', 'smallZip')"
+                        required type="text" class="form-control" id="inputZip" placeholder="Pl: 1146">
+                        <small id="smallZip"></small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="inputBurger">Hamburgerek kiválasztása:</label>
+                        <select     onkeyup="validatorOthersSelect('inputBurger', 'smallBurger', 'Hamburgerek')" onclick="validatorOthersSelect('inputBurger', 'smallBurger', 'Hamburgerek')"
+                        required id="inputBurger" class="form-control">
+                            <option selected>Hamburgerek</option>
+                            <option value="1000">Hamburger</option>
+                            <option value="1200">Sajtburger</option>
+                            <option value="1500">Magyaros Hambi</option>
+                            <option value="1600">Tojásos Hambi</option>
+                            <option value="2000">Dupla Hambi</option>
+                        </select>
+                        <small id="smallBurger"></small>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputNumber">Darab:</label>
+                        <select     onkeyup="validatorOthersSelect('inputNumber', 'smallNumber', 'Darabszám')" onclick="validatorOthersSelect('inputNumber', 'smallNumber', 'Darabszám')"
+                        required id="inputNumber" class="form-control">
+                            <option selected>Darabszám</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <small id="smallNumber"></small>
+                        <small>Maximum 10 és minimum 1 darab hamburgert lehet rendelni!</small>
+                    </div>
+                </div>
+                <div class="form-row toppings">
+                    <div class="col-md-6 form-check">
+                        <h4>Feltétek:</h4>
+                        <div>
+                            <input onclick="paradoxOtherWay()" checked class="form-check-input" type="checkbox" value="0" id="topNon">
+                            <label class="form-check-label" for="topNon">
+                              Nem kérek feltétet 
+                            </label>
+                        </div>
+                        <div>
+                            <input onclick="paradox()" class="form-check-input" type="checkbox" value="300" id="topBacon">
+                            <label class="form-check-label" for="topBacon">
+                              Plussz szelet bacon +300 HUF  
+                            </label>
+                        </div>
+                        <div>
+                            <input onclick="paradox()" class="form-check-input" type="checkbox" value="400" id="topEgg">
+                            <label class="form-check-label" for="topEgg">
+                              Plussz tojás +400 HUF  
+                            </label>
+                        </div>
+                        <div>
+                            <input onclick="paradox()" class="form-check-input" type="checkbox" value="600" id="topMeat">
+                            <label class="form-check-label" for="topMeat">
+                              Plussz szelet hús +600 HUF  
+                            </label>
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-6"> </div>
+                </div>
+
+               <!--  <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <button id="button" type="button" onclick="calcAmount()" class="btn btn-primary">Megrendelés</button>
+                    </div>
+                    <div class="col-md-6">
+                        Ár: <span id="showAmount"> 0 </span> HUF
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="bottomPart">
+
+
+        <div>
+            <span>Kövess minket!</span>
+        </div>
+
+
+
+        <div id="icons">
+            <a href="https://www.facebook.com/" target=" blank">
+                <i class="fa fa-facebook-official" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://twitter.com/explore" target=" blank">
+                <i class="fa fa-twitter" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://www.instagram.com/?hl=hu" target=" blank">
+                <i class="fa fa-instagram" aria-hidden="true"></a></i>
+            </a>
+            <a href="https://www.youtube.com/" target=" blank">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+
+        </div>
+
+        <div id="span">
+
+            <span>Minden jog fenntarva nekem</span>
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <a href="#">Akcióink</a>
+            </div>
+            <div class="col-3">
+                <a href="#">Étlap</a>
+            </div>
+            <div class="col-3">
+                <a href="/about.html">Kapcsolatok</a>
+            </div>
+            <div class="col-3">
+                <a href="/order.html">Házhoz rendelés</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/order.js"></script>
+    <script src="/js/input.js"></script>
+
+</body>
+
+</html>

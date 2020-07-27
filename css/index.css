@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+.topText{
+    color: black;
+    font-style: bold;
+    font-weight: 900;
+    text-align: center;
+   /* background-color: #f2f4f5;*/
+    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url(/lib/burger-500054_1920.jpg);
+   background-position: center;
+    padding-top:60px;
+    padding-bottom:60px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+
+
+#hamburgerMainSite {
+    width: 429px;
+    height: 311px;
+    border-radius: 5px;
+   }
+
+#mainText {
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    
+}
+
+#mainText h3 { 
+text-align: center;
+font-size: 24px;
+}
+
+.aboutUs {
+    margin-top: 70px;
+  /*  background-color: #f2f4f5;*/
+  background-color: darkgrey;
+  margin-bottom: 70px;
+}
+
+
+.bottomPart{
+     text-align: center;
+    font-size: 18px;
+margin-top: 120px;
+background-color: darkslategrey;
+padding-top: 70px;
+padding-bottom: 30px;
+border-top-style: solid;
+border-top-color:darkgray;
+border-top-width: 5px;
+}
+
+#icons { 
+    font-size: 34px;
+    }
+
